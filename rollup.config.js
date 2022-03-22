@@ -25,7 +25,7 @@ const commonInput = {
 }
 
 const commonOutput = {
-  // name: 'MyFpJsLibrary', // Need for IIFE build. Name of global variable
+  // name: 'MyFpJsLibrary', // Need for IIFE and UMD build. Name of global variable
   exports: 'named',
 }
 
