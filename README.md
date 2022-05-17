@@ -53,6 +53,7 @@ jobs:
   npm-publish:
     name: npm-publish
     runs-on: ubuntu-latest
+    environment: production
     steps:
       - name: Checkout
         uses: actions/checkout@v2
