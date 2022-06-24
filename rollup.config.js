@@ -5,11 +5,9 @@ import dtsPlugin from 'rollup-plugin-dts'
 import licensePlugin from 'rollup-plugin-license'
 import { join } from 'path'
 
-const { dependencies = {} } = require('./package.json')
+const { dependencies = {}, main, module, types } = require('./package.json')
 
 const inputFile = 'src/index.ts'
-const outputDirectory = 'dist'
-const artifactName = 'template-ts'
 
 const commonBanner = licensePlugin({
   banner: {
@@ -72,14 +70,14 @@ export default [
       // CJS for usage with `require()`
       {
         ...commonOutput,
-        file: `${outputDirectory}/${artifactName}.cjs.js`,
+        file: main,
         format: 'cjs',
       },
 
       // ESM for usage with `import`
       {
         ...commonOutput,
-        file: `${outputDirectory}/${artifactName}.esm.js`,
+        file: module,
         format: 'es',
       },
     ],
@@ -90,7 +88,7 @@ export default [
     ...commonInput,
     plugins: [dtsPlugin(), commonBanner],
     output: {
-      file: `${outputDirectory}/${artifactName}.d.ts`,
+      file: types,
       format: 'es',
     },
   },
