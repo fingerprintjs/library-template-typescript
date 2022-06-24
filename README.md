@@ -7,8 +7,23 @@
   <a href="https://github.com/fingerprintjs/library-template-typescript/actions/workflows/build.yml">
     <img src="https://github.com/fingerprintjs/library-template-typescript/actions/workflows/build.yml/badge.svg" alt="Build status">
   </a>
+<a href="https://github.com/fingerprintjs/library-template-typescript/actions/workflows/release.yml">
+    <img src="https://github.com/fingerprintjs/library-template-typescript/actions/workflows/release.yml/badge.svg" alt="Release status">
+   </a>
+   <a href="https://opensource.org/licenses/MIT">
+     <img src="https://img.shields.io/:license-mit-blue.svg" alt="MIT license">
+   </a>
 </p>
 This is template repository for creating TypeScript libraries by FingerprintJS team.
+
+## Features
+* [Typescript](https://www.typescriptlang.org/) support
+* [Jest](https://jestjs.io/) setup
+* Lint using [ESLint](https://eslint.org/)
+* [Prettier](https://prettier.io/) integration
+* Docs generation using [typedoc](https://typedoc.org/) with deployment to Github Pages
+* Automated releases using [semantic-release](https://github.com/semantic-release/semantic-release)
+* Conventional commits with commit lint using git hooks
 
 ## Quick start
 
@@ -34,66 +49,16 @@ Described in [Integrations and repositories best practices](https://github.com/f
 
 ### Publish to npm
 
-You can automize publishing to npm using GitHub action.
+Publishing to NPM is automated thanks to [semantic-release](https://github.com/semantic-release/semantic-release).
+On every push to `main` branch it will analyze commits and release new version accordingly to changes.
 
-1. Create an action file and add project build steps
-   1. Don't forget to set up your main branch
-   2. Set up commands to build and check your product
+To set it up:
 
-```yaml
-name: release
-on:
-  push:
-    branches:
-      - main
-    paths-ignore:
-      - '**.md'
-
-jobs:
-  npm-publish:
-    name: npm-publish
-    runs-on: ubuntu-latest
-    environment: production
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Cache
-        uses: actions/cache@v2
-        with:
-          path: node_modules
-          key: nodemodules-${{ hashFiles('yarn.lock') }}
-          restore-keys: nodemodules-
-      - name: Install Node packages
-        run: yarn install
-      - name: Build
-        run: yarn build
-      - name: Run tests
-        run: yarn test
-      - name: Publish if version has been updated
-        uses: pascalgn/npm-publish-action@e05dd3cd13412801d978714d8eac1cb922826da1
-        with:
-          tag_name: "v%s"
-          tag_message: "v%s"
-          commit_pattern: "^v?(\\d+\\.\\d+\\.\\d+(?:-(?:alpha|beta)\\.\\d+)?)$"
-          publish_command: "yarn"
-          publish_args: "--non-interactive --access=public --new-version"
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
-```
-2. Add `NPM_AUTH_TOKEN` to the repository secrets area
-3. Add `generate-changelog` package in `devDependencies` section of `package.json`
-4. Add release scripts to `package.json`
-```json
-{
-  "release:major": "changelog -M && git add CHANGELOG.md && yarn version --major --no-git-tag-version",
-  "release:minor": "changelog -m && git add CHANGELOG.md && yarn version --minor --no-git-tag-version",
-  "release:patch": "changelog -p && git add CHANGELOG.md && yarn version --patch --no-git-tag-version"
-}
-```
-5. Run yarn release:(major|minor|patch) depending on the version you need
-6. Package will publish after getting release commits into the main branch
-7. You are awesome!
+1. Add `NPM_AUTH_TOKEN` to the repository secrets area
+2. Add `GH_RELEASE_TOKEN` to the repository secrets area, it should have following permissions: `public_repo`, or `repo` if your repository is private.
+   Thanks to that, you will get automatic releases on GitHub, comments on issues and more!
+3. Package will publish automatically to NPM when there are relevant changes
+4. You are awesome!
 
 ### Preparing product for release
 Just follow [checklist for publishing new integration](https://github.com/fingerprintjs/home/wiki/Checklist-for-publishing-new-integration)
