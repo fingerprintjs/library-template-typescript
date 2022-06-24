@@ -7,6 +7,12 @@
   <a href="https://github.com/fingerprintjs/library-template-typescript/actions/workflows/build.yml">
     <img src="https://github.com/fingerprintjs/library-template-typescript/actions/workflows/build.yml/badge.svg" alt="Build status">
   </a>
+<a href="https://github.com/fingerprintjs/fingerprintjs-pro-svelte/actions/workflows/release.yml">
+    <img src="https://github.com/fingerprintjs/library-template-typescript/actions/workflows/release.yml/badge.svg" alt="Release status">
+   </a>
+   <a href="https://opensource.org/licenses/MIT">
+     <img src="https://img.shields.io/:license-mit-blue.svg" alt="MIT license">
+   </a>
 </p>
 This is template repository for creating TypeScript libraries by FingerprintJS team.
 
