@@ -7,7 +7,7 @@
   <a href="https://github.com/fingerprintjs/library-template-typescript/actions/workflows/build.yml">
     <img src="https://github.com/fingerprintjs/library-template-typescript/actions/workflows/build.yml/badge.svg" alt="Build status">
   </a>
-<a href="https://github.com/fingerprintjs/fingerprintjs-pro-svelte/actions/workflows/release.yml">
+<a href="https://github.com/fingerprintjs/library-template-typescript/actions/workflows/release.yml">
     <img src="https://github.com/fingerprintjs/library-template-typescript/actions/workflows/release.yml/badge.svg" alt="Release status">
    </a>
    <a href="https://opensource.org/licenses/MIT">
