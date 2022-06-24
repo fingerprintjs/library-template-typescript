@@ -6,6 +6,7 @@ on:
 
 jobs:
   release:
+    # Don't forget to configure production environment after repository is made public to require approval before triggering!
     environment: production
     runs-on: ubuntu-latest
     steps:
