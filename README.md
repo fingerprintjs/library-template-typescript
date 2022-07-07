@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://fingerprintjs.com">
+  <a href="https://fingerprint.com">
     <picture>
      <source media="(prefers-color-scheme: dark)" srcset="resources/logo_light.svg" />
      <source media="(prefers-color-scheme: light)" srcset="resources/logo_dark.svg" />
