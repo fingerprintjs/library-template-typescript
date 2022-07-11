@@ -2,7 +2,7 @@
   "name": "@fingerprintjs/library-template-typescript",
   "version": "0.0.1",
   "description": "Typescript library template project",
-  "author": "FingerprintJS, Inc (https://fingerprintjs.com)",
+  "author": "FingerprintJS, Inc (https://fingerprint.com)",
   "license": "MIT",
   "repository": {
     "type": "git",
