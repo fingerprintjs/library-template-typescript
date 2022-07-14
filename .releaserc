@@ -28,7 +28,7 @@
       "@semantic-release/release-notes-generator",
       {
         "preset": "conventionalCommits",
-        "prestConfig": {
+        "presetConfig": {
           "types": [
             {
               "type": "feat",
