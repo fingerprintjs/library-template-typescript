@@ -15,7 +15,8 @@
     "lint:fix": "yarn lint --fix",
     "test": "jest",
     "test:dts": "tsc --noEmit --isolatedModules dist/template-ts.d.ts",
-    "docs": "typedoc src/index.ts --out docs"
+    "docs": "typedoc src/index.ts --out docs",
+    "release": "semantic-release"
   },
   "main": "dist/template-ts.cjs.js",
   "module": "dist/template-ts.esm.js",
@@ -32,31 +33,6 @@
       "path": "./node_modules/cz-conventional-changelog"
     }
   },
-  "release": {
-    "branches": [
-      "main",
-      {
-        "name": "test",
-        "prerelease": true
-      }
-    ],
-    "plugins": [
-      "@semantic-release/commit-analyzer",
-      "@semantic-release/release-notes-generator",
-      "@semantic-release/changelog",
-      "@semantic-release/npm",
-      [
-        "@semantic-release/git",
-        {
-          "assets": [
-            "CHANGELOG.md",
-            "package.json"
-          ]
-        }
-      ],
-      "@semantic-release/github"
-    ]
-  },
   "devDependencies": {
     "@commitlint/cli": "^17.0.2",
     "@commitlint/config-conventional": "^17.0.2",
@@ -70,6 +46,7 @@
     "@typescript-eslint/eslint-plugin": "^5.29.0",
     "@typescript-eslint/parser": "^5.12.0",
     "commitizen": "^4.2.4",
+    "conventional-changelog-conventionalcommits": "^5.0.0",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.9.0",
     "eslint-config-prettier": "^8.3.0",

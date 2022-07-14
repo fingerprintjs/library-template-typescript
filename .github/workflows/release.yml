@@ -1,7 +1,7 @@
 name: Release
 
 on:
-  # TODO After publishing repository change this to trigger on push to main
+  # TODO After publishing repository change this to trigger on push to main and test
   workflow_dispatch:
 
 jobs:
