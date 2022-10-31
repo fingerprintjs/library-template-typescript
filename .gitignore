@@ -2,6 +2,9 @@
 /dist/
 /node_modules/
 
+# Coverage report
+/coverage/
+coverage.txt
 
 # Random excess stuff
 .DS_Store
