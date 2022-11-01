@@ -60,6 +60,20 @@ Check [FingerprintJS naming conventions](https://github.com/fingerprintjs/home/w
 
 Described in [Integrations and repositories best practices](https://github.com/fingerprintjs/home/wiki/Integrations-and-repositories-best-practices)
 
+### Tests
+
+For unit tests, we use jest, because of the good infrastructure, flexible instruments for mocks and big community.
+
+This repository contains example of how to configure code coverage reporting without SaaS solutions like codecov
+(such solutions require token with full access to the repository).
+In [PR#13](https://github.com/fingerprintjs/library-template-typescript/pull/13) you can find what you need to configure:
+- workflow to update the coverage badge in the readme and publish a full report for the main branch
+- workflow to add a comment to pr with coverage of the current branch and diff with main
+
+### Documentation
+
+For API reference we use `typedoc` package and publish documentation in GitHub Pages.
+
 ### Publish to npm
 
 Publishing to NPM is automated thanks to [semantic-release](https://github.com/semantic-release/semantic-release).
