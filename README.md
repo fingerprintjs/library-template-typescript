@@ -1,9 +1,9 @@
 <p align="center">
   <a href="https://fingerprint.com">
     <picture>
-     <source media="(prefers-color-scheme: dark)" srcset="resources/logo_light.svg" />
-     <source media="(prefers-color-scheme: light)" srcset="resources/logo_dark.svg" />
-     <img src="resources/logo_dark.svg" alt="Fingerprint logo" width="312px" />
+     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/fingerprintjs/library-template-typescript/main/resources/logo_light.svg" />
+     <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/fingerprintjs/library-template-typescript/main/resources/logo_dark.svg" />
+     <img src="https://raw.githubusercontent.com/fingerprintjs/library-template-typescript/main/resources/logo_dark.svg" alt="Fingerprint logo" width="312px" />
    </picture>
   </a>
 </p>
@@ -11,11 +11,20 @@
   <a href="https://github.com/fingerprintjs/library-template-typescript/actions/workflows/build.yml">
     <img src="https://github.com/fingerprintjs/library-template-typescript/actions/workflows/build.yml/badge.svg" alt="Build status">
   </a>
-<a href="https://github.com/fingerprintjs/library-template-typescript/actions/workflows/release.yml">
+  <a href="https://fingerprintjs.github.io/library-template-typescript/coverage/">
+    <img src="https://fingerprintjs.github.io/library-template-typescript/coverage/badges.svg" alt="coverage">
+  </a>
+  <a href="https://github.com/fingerprintjs/library-template-typescript/actions/workflows/release.yml">
     <img src="https://github.com/fingerprintjs/library-template-typescript/actions/workflows/release.yml/badge.svg" alt="Release status">
-   </a>
-   <a href="https://opensource.org/licenses/MIT">
-     <img src="https://img.shields.io/:license-mit-blue.svg" alt="MIT license">
+  </a>
+  <a href="https://opensource.org/licenses/MIT">
+    <img src="https://img.shields.io/:license-mit-blue.svg" alt="MIT license">
+  </a>
+  <a href="https://discord.gg/39EpE2neBg">
+    <img src="https://img.shields.io/discord/852099967190433792?style=logo&label=Discord&logo=Discord&logoColor=white" alt="Discord server">
+  </a>
+   <a href="https://fingerprintjs.github.io/library-template-typescript/docs/">
+     <img src="https://img.shields.io/badge/-Documentation-green" alt="Documentation">
    </a>
 </p>
 This is template repository for creating TypeScript libraries by FingerprintJS team.
