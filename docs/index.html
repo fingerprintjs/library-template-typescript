@@ -72,6 +72,23 @@ This is template repository for creating TypeScript libraries by FingerprintJS t
 </a>
 <p>Described in <a href="https://github.com/fingerprintjs/home/wiki/Integrations-and-repositories-best-practices">Integrations and repositories best practices</a></p>
 
+<a href="#tests" id="tests" style="color: inherit; text-decoration: none;">
+  <h3>Tests</h3>
+</a>
+<p>For unit tests, we use jest, because of the good infrastructure, flexible instruments for mocks and big community.</p>
+<p>This repository contains example of how to configure code coverage reporting without SaaS solutions like codecov
+(such solutions require token with full access to the repository).
+In <a href="https://github.com/fingerprintjs/library-template-typescript/pull/13">PR#13</a> you can find what you need to configure:</p>
+<ul>
+<li>workflow to update the coverage badge in the readme and publish a full report for the main branch</li>
+<li>workflow to add a comment to pr with coverage of the current branch and diff with main</li>
+</ul>
+
+<a href="#documentation" id="documentation" style="color: inherit; text-decoration: none;">
+  <h3>Documentation</h3>
+</a>
+<p>For API reference we use <code>typedoc</code> package and publish documentation in GitHub Pages.</p>
+
 <a href="#publish-to-npm" id="publish-to-npm" style="color: inherit; text-decoration: none;">
   <h3>Publish to npm</h3>
 </a>
