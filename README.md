@@ -34,7 +34,7 @@ This is template repository for creating TypeScript libraries by FingerprintJS t
 * [Jest](https://jestjs.io/) setup
 * Lint using [ESLint](https://eslint.org/)
 * [Prettier](https://prettier.io/) integration
-* Docs generation using [typedoc](https://typedoc.org/) with deployment to Github Pages
+* Docs generation using [typedoc](https://typedoc.org/) with deployment to GitHub Pages
 * Automated releases using [semantic-release](https://github.com/semantic-release/semantic-release)
 * Conventional commits with commit lint using git hooks
 
