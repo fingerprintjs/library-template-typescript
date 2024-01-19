@@ -10,7 +10,7 @@
   },
   "scripts": {
     "prepare": "husky install",
-    "build": "rimraf dist && rollup -c rollup.config.js",
+    "build": "rimraf dist && rollup -c rollup.config.js --bundleConfigAsCjs",
     "lint": "eslint --ext .js,.ts --ignore-path .gitignore --max-warnings 0 .",
     "lint:fix": "yarn lint --fix",
     "test": "jest",
@@ -36,9 +36,10 @@
   "devDependencies": {
     "@commitlint/cli": "^17.0.2",
     "@commitlint/config-conventional": "^17.0.2",
-    "@rollup/plugin-json": "^4.1.0",
-    "@rollup/plugin-typescript": "^8.3.3",
+    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-typescript": "^11.1.6",
     "@types/jest": "^28.1.3",
+    "@types/node": "^20.11.5",
     "@typescript-eslint/eslint-plugin": "^5.29.0",
     "@typescript-eslint/parser": "^5.12.0",
     "commitizen": "^4.2.4",
@@ -53,12 +54,12 @@
     "lint-staged": "^13.0.2",
     "prettier": "^2.7.1",
     "rimraf": "^4.4.1",
-    "rollup": "^2.75.7",
-    "rollup-plugin-dts": "^4.2.2",
-    "rollup-plugin-license": "^2.8.1",
+    "rollup": "^4.9.5",
+    "rollup-plugin-dts": "^6.1.0",
+    "rollup-plugin-license": "^3.2.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "ts-jest": "^28.0.5",
-    "typedoc": "^0.22.17",
-    "typescript": "^4.7.4"
+    "typedoc": "^0.25.7",
+    "typescript": "^5.3.3"
   }
 }
