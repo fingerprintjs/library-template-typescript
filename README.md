@@ -17,6 +17,8 @@
 </p>
 This is template repository for creating TypeScript libraries by FingerprintJS team.
 
+test change
+
 ## Features
 * [Typescript](https://www.typescriptlang.org/) support
 * [Jest](https://jestjs.io/) setup
