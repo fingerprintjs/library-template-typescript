@@ -8,8 +8,9 @@ jobs:
   build-and-release:
     # Don't forget to configure production environment after repository is made public to require approval before triggering!
     name: 'Build project, run CI checks and publish new release'
-    uses: fingerprintjs/dx-team-toolkit/.github/workflows/release-typescript-project.yml@07acac27bda3c9a44ffa0c30a6266a1e0e8a28d3
+    uses: fingerprintjs/dx-team-toolkit/.github/workflows/release-typescript-project.yml@ddb61178ef7dbbd5e81b24fd1a7929ecce5c4bd8
+    with:
+      appId: ${{ secrets.APP_ID }}
     secrets:
-      APP_ID: ${{ secrets.APP_ID }}
       APP_PRIVATE_KEY: ${{ secrets.APP_PRIVATE_KEY }}
       NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
