@@ -1,3 +1,10 @@
+## [1.0.0-test.2](https://github.com/fingerprintjs/library-template-typescript/compare/v1.0.0-test.1...v1.0.0-test.2) (2024-03-11)
+
+
+### Bug Fixes
+
+* use gh app to release ([64c9e5c](https://github.com/fingerprintjs/library-template-typescript/commit/64c9e5ca1af2679644577bf60d78ce7b24610151))
+
 ## 1.0.0-test.1 (2024-03-07)
 
 
