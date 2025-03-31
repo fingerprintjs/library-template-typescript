@@ -26,7 +26,7 @@
     "dist"
   ],
   "lint-staged": {
-    "*.{js,ts}": "yarn run lint:fix"
+    "*.{js,ts}": "pnpm run lint:fix"
   },
   "config": {
     "commitizen": {
