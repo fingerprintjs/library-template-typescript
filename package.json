@@ -25,6 +25,10 @@
   "files": [
     "dist"
   ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
   "lint-staged": {
     "*.{js,ts}": "pnpm run lint:fix"
   },
